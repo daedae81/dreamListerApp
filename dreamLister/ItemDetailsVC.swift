@@ -23,8 +23,9 @@ class ItemDetailsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDeleg
     var imagePicker: UIImagePickerController!
     
     override func viewDidLoad() {
-        super.viewDidLoad()
         
+        super.viewDidLoad()
+
         if let topItem = self.navigationController?.navigationBar.topItem {
             
             topItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
@@ -35,19 +36,19 @@ class ItemDetailsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDeleg
         imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         
-                let store = Store(context: context)
-                store.name = "Best Buy"
-                let store2 = Store(context: context)
-                store2.name = "Tesla Dealership"
-                let store3 = Store(context: context)
-                store3.name = "Target"
-                let store4 = Store(context: context)
-                store4.name = "Amazon"
-                let store5 = Store(context: context)
-                store5.name = "K Mart"
-                let store6 = Store(context: context)
-                store6.name = "Frys Electronics"
-        
+//                let store = Store(context: context)
+//                store.name = "Best Buy"
+//                let store2 = Store(context: context)
+//                store2.name = "Tesla Dealership"
+//                let store3 = Store(context: context)
+//                store3.name = "Target"
+//                let store4 = Store(context: context)
+//                store4.name = "Amazon"
+//                let store5 = Store(context: context)
+//                store5.name = "K Mart"
+//                let store6 = Store(context: context)
+//                store6.name = "Frys Electronics"
+//        
                 ad.saveContext()
         getStores()
         
@@ -184,6 +185,12 @@ class ItemDetailsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDeleg
         imagePicker.dismiss(animated: true, completion: nil)
         
     }
+    
+    @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
+        
+        view.endEditing(true)
+    }
+    
     
     
 }

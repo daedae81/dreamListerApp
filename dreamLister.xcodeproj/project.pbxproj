@@ -83,12 +83,6 @@
 				CD1D83781DC5A39300B332AF /* View */,
 				CD1D83761DC5A35F00B332AF /* Model */,
 				CD1D83791DC5A39D00B332AF /* Controller */,
-				CD1D83511DC57B8700B332AF /* AppDelegate.swift */,
-				CD1D83551DC57B8700B332AF /* Main.storyboard */,
-				CD1D835B1DC57B8700B332AF /* Assets.xcassets */,
-				CD1D835D1DC57B8700B332AF /* LaunchScreen.storyboard */,
-				CD1D83601DC57B8700B332AF /* Info.plist */,
-				CD1D83581DC57B8700B332AF /* dreamLister.xcdatamodeld */,
 			);
 			path = dreamLister;
 			sourceTree = "<group>";
@@ -100,6 +94,8 @@
 				CD1D83681DC596B800B332AF /* ItemType+CoreDataClass.swift */,
 				CD1D836A1DC596B800B332AF /* Store+CoreDataClass.swift */,
 				CD1D836C1DC596B800B332AF /* Image+CoreDataClass.swift */,
+				CD1D83601DC57B8700B332AF /* Info.plist */,
+				CD1D83581DC57B8700B332AF /* dreamLister.xcdatamodeld */,
 				CD1D83771DC5A36400B332AF /* Generated */,
 			);
 			name = Model;
@@ -122,6 +118,9 @@
 				CD1D837D1DC5B21500B332AF /* MaterialView.swift */,
 				CD1D837F1DC5B4F600B332AF /* ItemCell.swift */,
 				CDD290F71E0619FE00636807 /* CustomTextField.swift */,
+				CD1D83551DC57B8700B332AF /* Main.storyboard */,
+				CD1D835D1DC57B8700B332AF /* LaunchScreen.storyboard */,
+				CD1D835B1DC57B8700B332AF /* Assets.xcassets */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -131,6 +130,7 @@
 			children = (
 				CD1D83531DC57B8700B332AF /* MainVC.swift */,
 				CDD290F91E0626ED00636807 /* ItemDetailsVC.swift */,
+				CD1D83511DC57B8700B332AF /* AppDelegate.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";

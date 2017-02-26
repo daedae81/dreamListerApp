@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="a0r-uE-sM3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="a0r-uE-sM3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -33,6 +33,9 @@
                                     <segment title="Title"/>
                                 </segments>
                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="segmentChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="M4i-J7-uEC"/>
+                                </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tTu-sg-fsx">
                                 <rect key="frame" x="16" y="132" width="343" height="535"/>
@@ -264,6 +267,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="YX8-vE-uiQ" firstAttribute="leading" secondItem="mlm-Fp-b9Y" secondAttribute="leadingMargin" id="0lu-p5-C2X"/>
                             <constraint firstItem="VaW-6O-yvk" firstAttribute="top" secondItem="9DY-h1-6bO" secondAttribute="bottom" constant="8" id="3J8-CV-JuV"/>
@@ -303,6 +307,9 @@
                             <constraint firstItem="w4S-pb-CtK" firstAttribute="trailing" secondItem="mlm-Fp-b9Y" secondAttribute="trailingMargin" id="y3y-GH-HZD"/>
                             <constraint firstAttribute="trailing" secondItem="S6k-U1-BCf" secondAttribute="trailing" id="yhl-yu-QKa"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="j33-Zg-L82" appends="YES" id="C6W-EM-EpE"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Add/Edit" id="gCb-KM-i0V">
                         <barButtonItem key="rightBarButtonItem" systemItem="trash" id="5hi-JO-n54">
@@ -321,6 +328,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s9X-YN-OP6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="j33-Zg-L82">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="Rr1-v6-Avy" id="DBB-OL-hRO"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2125.5999999999999" y="135.38230884557723"/>
         </scene>
